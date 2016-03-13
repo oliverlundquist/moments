@@ -1,0 +1,236 @@
+[
+	{
+		"location": "Golden Circle, Iceland",
+		"longitude": -21.0000,
+		"latitude": 63.9333,
+		"images": [
+			"assets/images/iceland1.jpg",
+			"assets/images/iceland2.jpg",
+			"assets/images/iceland3.jpg",
+			"assets/images/iceland4.jpg"
+		]
+	},
+	{
+		"location": "Jinshanling, China",
+		"longitude": 117.2444,
+		"latitude": 40.6764,
+		"images": [
+			"assets/images/jinshanling1.jpg",
+			"assets/images/jinshanling2.jpg"
+		]
+	},
+	{
+		"location": "Tromsø, Norway",
+		"longitude": 18.9428,
+		"latitude": 69.6828,
+		"images": [
+			"assets/images/tromsoe1.jpg",
+			"assets/images/tromsoe2.jpg",
+			"assets/images/tromsoe3.jpg",
+			"assets/images/tromsoe4.jpg"
+		]
+	},
+	{
+		"location": "San Francisco, USA",
+		"longitude": -122.4167,
+		"latitude": 37.7833,
+		"images": [
+			"assets/images/sanfrancisco1.jpg",
+			"assets/images/sanfrancisco2.jpg"
+		]
+	},
+	{
+		"location": "Healy, Alaska",
+		"longitude": -149.9000,
+		"latitude": 61.2167,
+		"images": [
+			"assets/images/alaska1.jpg",
+			"assets/images/alaska2.jpg",
+			"assets/images/alaska3.jpg",
+			"assets/images/alaska4.jpg",
+			"assets/images/alaska5.jpg",
+			"assets/images/alaska6.jpg"
+		]
+	},
+
+	{
+		"location": "London, England",
+		"longitude": 0.1275,
+		"latitude": 51.5072,
+		"images": [
+			"assets/images/london1.jpg",
+			"assets/images/london2.jpg",
+			"assets/images/london3.jpg",
+			"assets/images/london4.jpg",
+			"assets/images/london5.jpg"
+		]
+	},
+	{
+		"location": "New York, USA",
+		"longitude": -74.0059,
+		"latitude": 40.7127,
+		"images": [
+			"assets/images/newyork1.jpg",
+			"assets/images/newyork2.jpg",
+			"assets/images/newyork3.jpg",
+			"assets/images/newyork4.jpg"
+		]
+	},
+	{
+		"location": "Beijing, China",
+		"longitude": 116.3833,
+		"latitude": 39.9167,
+		"images": [
+			"assets/images/beijing1.jpg",
+			"assets/images/beijing2.jpg"
+		]
+	},
+	{
+		"location": "Kiruna, Sweden",
+		"longitude": 20.2167,
+		"latitude": 67.8500,
+		"images": [
+			"assets/images/kiruna1.jpg",
+			"assets/images/kiruna2.jpg",
+			"assets/images/kiruna3.jpg",
+			"assets/images/kiruna4.jpg",
+			"assets/images/kiruna5.jpg",
+			"assets/images/kiruna6.jpg",
+			"assets/images/kiruna7.jpg"
+		]
+	},
+	{
+		"location": "Florence, Italy",
+		"longitude": 11.2500,
+		"latitude": 43.7833,
+		"images": [
+			"assets/images/florence1.jpg",
+			"assets/images/florence2.jpg"
+		]
+	},
+
+	{
+		"location": "Hanoi, Vietnam",
+		"longitude": 105.8542,
+		"latitude": 21.0285,
+		"images": [
+			"assets/images/hanoi1.jpg",
+			"assets/images/hanoi2.jpg",
+			"assets/images/hanoi3.jpg",
+			"assets/images/hanoi4.jpg",
+			"assets/images/hanoi5.jpg"
+		]
+	},
+	{
+		"location": "Hong Kong",
+		"longitude": 114.1747,
+		"latitude": 22.2783,
+		"images": [
+			"assets/images/hongkong1.jpg",
+			"assets/images/hongkong2.jpg",
+			"assets/images/hongkong3.jpg",
+			"assets/images/hongkong4.jpg",
+			"assets/images/hongkong5.jpg",
+			"assets/images/hongkong6.jpg",
+			"assets/images/hongkong7.jpg",
+			"assets/images/hongkong8.jpg"
+		]
+	},
+
+	{
+		"location": "Copenhagen, Denmark",
+		"longitude": 12.5683,
+		"latitude": 55.6761,
+		"images": [
+			"assets/images/copenhagen1.jpg",
+			"assets/images/copenhagen2.jpg",
+			"assets/images/copenhagen3.jpg"
+		]
+	},
+
+	{
+		"location": "Nilai, Malaysia",
+		"longitude": 101.8000,
+		"latitude": 2.8167,
+		"images": [
+			"assets/images/nilai1.jpg"
+		]
+	},
+
+
+	{
+		"location": "Taipei, Taiwan",
+		"longitude": 121.6333,
+		"latitude": 25.0333,
+		"images": [
+			"assets/images/taipei1.jpg",
+			"assets/images/taipei2.jpg"
+		]
+	},
+	{
+		"location": "Rome, Italy",
+		"longitude": 12.5000,
+		"latitude": 41.9000,
+		"images": [
+			"assets/images/rome1.jpg",
+			"assets/images/rome2.jpg"
+		]
+	},
+
+	{
+		"location": "Malmö, Sweden",
+		"longitude": 13.0358,
+		"latitude": 55.6058,
+		"images": [
+			"assets/images/malmoe1.jpg",
+			"assets/images/malmoe2.jpg",
+			"assets/images/malmoe3.jpg",
+			"assets/images/malmoe4.jpg",
+			"assets/images/malmoe5.jpg",
+			"assets/images/malmoe6.jpg",
+			"assets/images/malmoe7.jpg",
+			"assets/images/malmoe8.jpg",
+			"assets/images/malmoe9.jpg",
+			"assets/images/malmoe10.jpg",
+			"assets/images/malmoe11.jpg"
+		]
+	},
+	{
+		"location": "Tainan, Taiwan",
+		"longitude": 120.1833,
+		"latitude": 22.9833,
+		"images": [
+			"assets/images/tainan1.jpg",
+			"assets/images/tainan2.jpg"
+		]
+	},
+
+	{
+		"location": "Bangkok, Thailand",
+		"longitude": 100.5018,
+		"latitude": 13.7563,
+		"images": [
+			"assets/images/bangkok1.jpg",
+			"assets/images/bangkok2.jpg",
+			"assets/images/bangkok3.jpg",
+			"assets/images/bangkok4.jpg"
+		]
+	},
+	{
+		"location": "Seoul, South Korea",
+		"longitude": 126.9667,
+		"latitude": 37.5667,
+		"images": [
+			"assets/images/seoul1.jpg",
+			"assets/images/seoul2.jpg"
+		]
+	},
+	{
+		"location": "Shanghai, China",
+		"longitude": 121.5000,
+		"latitude": 31.2000,
+		"images": [
+			"assets/images/shanghai1.jpg"
+		]
+	}
+]

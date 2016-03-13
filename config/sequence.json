@@ -1,0 +1,59 @@
+[
+	{
+		"name": "showGlobe",
+		"duration": 600,
+		"repeat": false,
+		"objects": [
+			"globe",
+			"stripe",
+			"hud"
+		]
+	},
+	{
+		"name": "panToNextDestination",
+		"duration": 2000,
+		"repeat": false,
+		"objects": [
+			"globe",
+			"airplane",
+			"slideshow",
+			"hud"
+		]
+	},
+	{
+		"name": "showDestinationName",
+		"duration": 2000,
+		"repeat": false,
+		"objects": [
+			"stripe",
+			"hud"
+		]
+	},
+	{
+		"name": "hideGlobe",
+		"duration": 600,
+		"repeat": false,
+		"objects": [
+			"globe",
+			"airplane",
+			"stripe",
+			"slideshow",
+			"hud"
+		]
+	},
+	{
+		"name": "slidePhotos",
+		"duration": 1800,
+		"repeat": true,
+		"objects": [
+			"slideshow",
+			"hud"
+		]
+	},
+	{
+		"name": "pauseToShowLastPhotoSlightlyLonger",
+		"duration": 900,
+		"repeat": false,
+		"objects": []
+	}
+]

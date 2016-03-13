@@ -1,0 +1,40 @@
+{
+	"airplane": {
+		"scale": "0.5",
+		"size": 30
+	},
+	"canvas": {
+		"width": 1200,
+		"height": 400
+	},
+	"globe": {
+		"scale": 100,
+		"start": [139.6833, 35.6833], // Tokyo, Japan
+		"translation": [200, 180],
+		"background": {
+			"radius": 150
+		}
+	},
+	"slideshow": {
+		"width": 800,
+		"height": 400,
+		"offset": {
+			"x": 200,
+			"y": 0
+		}
+	},
+	"stripe": {
+		"width": 1206,
+		"height": 100,
+		"offset": {
+			"x": -3, // compensation for 3px border
+			"y": 130
+		},
+		"label": {
+			"offset": {
+				"x": 360,
+				"y": 70
+			}
+		}
+	}
+}
