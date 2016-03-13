@@ -1,4 +1,5 @@
 var d3 = require('d3');
+var Promise = require('bluebird');
 var sequence = require('../config/sequence.json');
 var destinations = require('../config/destinations.json');
 
@@ -21,6 +22,8 @@ module.exports = function (canvas, loop, position, objects) {
         sequenceCompleted      = [];
     }
 
+
+
     function nextDestination() {
         if (destinationIndex >= destinations.length) {
             destinationIndex = 0;
@@ -32,7 +35,9 @@ module.exports = function (canvas, loop, position, objects) {
             destinations[destinationIndex].latitude
         ];
         position.setDestination(destinationCoordinates);
-        nextSequence();
+        preloadImages(destination, function () {
+            nextSequence();
+        });
     }
 
     ///////////////
@@ -88,5 +93,21 @@ module.exports = function (canvas, loop, position, objects) {
             window.requestAnimationFrame ? window.requestAnimationFrame(animate) : animate();
             return true;
         });
+    }
+
+    function preloadImages(destination, callback) {
+        var promises = [];
+        destination.images.forEach(function (image) {
+            promises.push(
+                new Promise(function (resolve, reject) {
+                    var xhr = new XMLHttpRequest;
+                    xhr.addEventListener("error", reject);
+                    xhr.addEventListener("load", resolve);
+                    xhr.open("GET", (window.location.href + '' + image));
+                    xhr.send();
+                })
+            );
+        });
+        Promise.all(promises).then(callback, callback);
     }
 }
