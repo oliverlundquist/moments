@@ -9,7 +9,7 @@ module.exports = function (canvas, loop, position, objects) {
     activate();
 
     return {
-        start: nextDestination
+        start: preloadImages
     }
 
     ///////////////
@@ -22,7 +22,23 @@ module.exports = function (canvas, loop, position, objects) {
         sequenceCompleted      = [];
     }
 
-
+    function preloadImages() {
+        var promises = [];
+        destinations.forEach(function (destination) {
+            destination.images.forEach(function (image) {
+                promises.push(
+                    new Promise(function (resolve, reject) {
+                        var xhr = new XMLHttpRequest;
+                        xhr.addEventListener("error", reject);
+                        xhr.addEventListener("load", resolve);
+                        xhr.open("GET", (window.location.href + '' + image));
+                        xhr.send();
+                    })
+                );
+            });
+        });
+        Promise.all(promises).then(nextDestination, nextDestination);
+    }
 
     function nextDestination() {
         if (destinationIndex >= destinations.length) {
@@ -35,9 +51,7 @@ module.exports = function (canvas, loop, position, objects) {
             destinations[destinationIndex].latitude
         ];
         position.setDestination(destinationCoordinates);
-        preloadImages(destination, function () {
-            nextSequence();
-        });
+        nextSequence();
     }
 
     ///////////////
@@ -93,21 +107,5 @@ module.exports = function (canvas, loop, position, objects) {
             window.requestAnimationFrame ? window.requestAnimationFrame(animate) : animate();
             return true;
         });
-    }
-
-    function preloadImages(destination, callback) {
-        var promises = [];
-        destination.images.forEach(function (image) {
-            promises.push(
-                new Promise(function (resolve, reject) {
-                    var xhr = new XMLHttpRequest;
-                    xhr.addEventListener("error", reject);
-                    xhr.addEventListener("load", resolve);
-                    xhr.open("GET", (window.location.href + '' + image));
-                    xhr.send();
-                })
-            );
-        });
-        Promise.all(promises).then(callback, callback);
     }
 }
