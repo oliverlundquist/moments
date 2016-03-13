@@ -31,7 +31,7 @@ module.exports = function (canvas, loop, position, objects) {
                         var xhr = new XMLHttpRequest;
                         xhr.addEventListener("error", reject);
                         xhr.addEventListener("load", resolve);
-                        xhr.open("GET", (window.location.href + '' + image));
+                        xhr.open("GET", (window.location.href.substr(0, window.location.href.lastIndexOf('/')) + '/' + image));
                         xhr.send();
                     })
                 );
