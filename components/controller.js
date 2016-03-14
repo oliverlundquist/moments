@@ -24,24 +24,21 @@ module.exports = function (canvas, loop, position, objects) {
 
     function preloadImages() {
         var promises = [];
+        var count = 0;
+        createOverlay();
         destinations.forEach(function (destination) {
             destination.images.forEach(function (image) {
                 promises.push(
                     new Promise(function (resolve, reject) {
-                        // var xhr = new XMLHttpRequest;
-                        // xhr.addEventListener("error", reject);
-                        // xhr.addEventListener("load", resolve);
-                        // xhr.open("GET", (window.location.href.substr(0, window.location.href.lastIndexOf('/')) + '/' + image));
-                        // xhr.send();
                         var imageHolder     = new Image();
-                        imageHolder.onload  = resolve;
-                        imageHolder.onerror = reject;
+                        imageHolder.onload  = function () { count++; updateOverlay(count, promises.length); resolve(); }
+                        imageHolder.onerror = function () { count++; updateOverlay(count, promises.length); reject();  }
                         imageHolder.src     = image;
                     })
                 );
             });
         });
-        Promise.all(promises).then(nextDestination, nextDestination);
+        Promise.all(promises).then(initializeSequence, initializeSequence);
     }
 
     function nextDestination() {
@@ -111,5 +108,26 @@ module.exports = function (canvas, loop, position, objects) {
             window.requestAnimationFrame ? window.requestAnimationFrame(animate) : animate();
             return true;
         });
+    }
+
+    ///////////////
+
+    function createOverlay() {
+        var overlay = document.createElement('div');
+        overlay.id = 'overlay';
+        document.getElementById('content').appendChild(overlay);
+    }
+
+    function updateOverlay(count, total) {
+        document.getElementById('overlay').innerHTML = 'Preloading images:<br />' + Math.floor((count / total) * 100) + '%';
+    }
+
+    function deleteOverlay() {
+        document.getElementById('content').removeChild(document.getElementById('overlay'));
+    }
+
+    function initializeSequence() {
+        deleteOverlay();
+        nextDestination();
     }
 }
