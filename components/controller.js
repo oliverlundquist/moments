@@ -28,11 +28,15 @@ module.exports = function (canvas, loop, position, objects) {
             destination.images.forEach(function (image) {
                 promises.push(
                     new Promise(function (resolve, reject) {
-                        var xhr = new XMLHttpRequest;
-                        xhr.addEventListener("error", reject);
-                        xhr.addEventListener("load", resolve);
-                        xhr.open("GET", (window.location.href.substr(0, window.location.href.lastIndexOf('/')) + '/' + image));
-                        xhr.send();
+                        // var xhr = new XMLHttpRequest;
+                        // xhr.addEventListener("error", reject);
+                        // xhr.addEventListener("load", resolve);
+                        // xhr.open("GET", (window.location.href.substr(0, window.location.href.lastIndexOf('/')) + '/' + image));
+                        // xhr.send();
+                        var imageHolder     = new Image();
+                        imageHolder.onload  = resolve;
+                        imageHolder.onerror = reject;
+                        imageHolder.src     = image;
                     })
                 );
             });
